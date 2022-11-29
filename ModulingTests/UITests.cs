@@ -3,7 +3,7 @@ using OpenQA.Selenium.Winium;
 
 namespace ModulingTests
 {
-    [TestClass]
+    //[TestClass]
     public class UITests
     {
         private WiniumDriver setup()
