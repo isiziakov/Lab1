@@ -12,7 +12,7 @@ namespace ModulingTests
             WiniumDriverService service = WiniumDriverService.CreateDesktopService(@"C:\Users\ivans\Downloads\");
             return new WiniumDriver(service, options);
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod1()
         {
             
@@ -26,7 +26,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod2()
         {
             var driver = setup();
@@ -39,7 +39,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod3()
         {
             var driver = setup();
@@ -52,7 +52,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod4()
         {
             var driver = setup();
@@ -65,7 +65,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod5()
         {
             var driver = setup();
@@ -81,7 +81,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod6()
         {
             var driver = setup();
@@ -97,7 +97,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod7()
         {
             var driver = setup();
@@ -113,7 +113,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod8()
         {
             var driver = setup();
@@ -131,7 +131,7 @@ namespace ModulingTests
 
             driver.Quit();
         }
-        [TestMethod]
+        //[TestMethod]
         public void TestMethod9()
         {
             var driver = setup();
