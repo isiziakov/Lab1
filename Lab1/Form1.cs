@@ -13,8 +13,8 @@ namespace Lab1
     public partial class Form1 : Form
     {
         public IGetInfo info = new Info();
-        public int[,] ResultArray = new int[8, 8];
-        public int size = 1;
+        public Int32[,] ResultArray = new Int32[8, 8];
+        public Int32 size = 1;
         public Form1()
         {
             InitializeComponent();
@@ -32,19 +32,19 @@ namespace Lab1
 
         public void setSize(string text)
         {
-            if (int.TryParse(text, out int b))
+            if (Int32.TryParse(text, out Int32 b))
             {
                 size = 1;
-                if (int.Parse(text) > 0 && int.Parse(text) <= 9)
+                if (Int32.Parse(text) > 0 && Int32.Parse(text) <= 9)
                 {
-                    size = int.Parse(text);
+                    size = Int32.Parse(text);
                 }
             }
             else
             {
                 size = 1;
             }
-            ResultArray = new int[8, 8];
+            ResultArray = new Int32[8, 8];
             textBox1.Text = size.ToString();
             textBox4.Text = "";
             textBox5.Text = "";
@@ -108,23 +108,23 @@ namespace Lab1
             show();
         }
 
-        public int headerCount = 0;
-        public int rawsCount = 0;
-        public int numbersCount = 0;
+        public Int32 headerCount = 0;
+        public Int32 rawsCount = 0;
+        public Int32 numbersCount = 0;
         public void show()
         {
             var text = "    ";
-            for (int i = 1; i <= size; i++)
+            for (Int32 i = 1; i <= size; i++)
             {
                 headerCount++;
                 text += " " + i + " ";
             }
             text += "\r\n\r\n";
-            for (int i = 1; i <= size; i++)
+            for (Int32 i = 1; i <= size; i++)
             {
                 text += " " + i + " ";
                 rawsCount++;
-                for (int j = 0; j < size; j++)
+                for (Int32 j = 0; j < size; j++)
                 {
                     var number = ResultArray[i - 1, j].ToString();
                     text += " " + number + " ";
@@ -138,7 +138,7 @@ namespace Lab1
 
     public interface IGetInfo
     {
-        int getInfo(string text);
+        Int32 getInfo(string text);
     }
 
     public class Info : IGetInfo
@@ -148,11 +148,11 @@ namespace Lab1
 
         }
 
-        public int getInfo(string text)
+        public Int32 getInfo(string text)
         {
-            if (text.Length == 3 && int.TryParse(text[0].ToString(), out int b) && int.TryParse(text[2].ToString(), out int a))
+            if (text.Length == 3 && Int32.TryParse(text[0].ToString(), out Int32 b) && Int32.TryParse(text[2].ToString(), out Int32 a))
             {
-                return int.Parse(text[0].ToString()) * 10 + int.Parse(text[2].ToString());
+                return Int32.Parse(text[0].ToString()) * 10 + Int32.Parse(text[2].ToString());
             }
             else return -1;
         }
